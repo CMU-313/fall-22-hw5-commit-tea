@@ -1,20 +1,10 @@
-name: Linting CI/CD
+name: Lint
 
-on:
-  push:
-    branches: 
-      - 'main'
-    tags: [v*]
-  workflow_dispatch:
+on: [push]
 
 jobs:
-  build_and_coverage_report:
+  eslint:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Install modules
-        run: yarn
-      - name: Run ESLint
-        run: eslint . --ext .js,.jsx,.ts,.tsx
-
-     
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/eslint-action@1.0.2
