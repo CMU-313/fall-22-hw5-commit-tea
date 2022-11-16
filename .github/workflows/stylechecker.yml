@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkstyle for Java
-    - uses: dbelyaev/action-checkstyle@v0.6.1
+      uses: dbelyaev/action-checkstyle@v0.6.1
