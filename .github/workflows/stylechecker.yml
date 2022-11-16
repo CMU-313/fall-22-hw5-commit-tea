@@ -1,8 +1,9 @@
-name: Run CheckStyle for Java Files
+name: reviewdog
 on: push
 jobs:
-  build:
+  checkstyle:
+    name: run checkstyle
     runs-on: ubuntu-latest
     steps:
-    - name: Checkstyle for Java
-      uses: dbelyaev/action-checkstyle@v0.6.1
+      - uses: actions/checkout@v2
+      - uses: dbelyaev/action-checkstyle@v0.5.1
